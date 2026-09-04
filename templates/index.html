@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Gia Home Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans">
+    
+    <!-- Container chính: Full màn hình trên mobile, Card lớn trên Desktop -->
+    <div class="w-full max-w-6xl bg-white md:rounded-[2rem] md:shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-screen md:min-h-[80vh] md:my-10 relative">
+        
+        <!-- Khu vực Hình Ảnh (Cột trái trên PC / Phần trên cùng trên Mobile) -->
+        <div class="w-full md:w-1/2 h-[40vh] md:h-auto relative bg-blue-50">
+            <!-- Chèn ảnh từ thư mục static -->
+            <img src="{{ url_for('static', filename='index1.png') }}" 
+                 alt="Bác sĩ chăm sóc người cao tuổi" 
+                 class="w-full h-full object-cover object-center">
+                 
+            <!-- Lớp phủ gradient (chỉ hiện trên mobile để làm mượt phần nối với nền trắng) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent md:hidden"></div>
+        </div>
+
+        <!-- Khu vực Nội Dung & Thao Tác (Cột phải trên PC / Phần dưới trên Mobile) -->
+        <div class="w-full md:w-1/2 p-6 md:p-14 flex flex-col justify-center">
+            
+            <!-- Header & Tiêu đề -->
+            <div class="mb-8 md:mb-12">
+                <h1 class="text-lg md:text-xl font-bold text-purple-700 flex items-center gap-2">
+                    <span class="text-3xl">💜</span> KelVin Home Care
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mt-4 leading-tight tracking-tight">
+                    Chăm Sóc Y Tế Tận Tâm<br>
+                    <span class="text-blue-600">Cho Người Cao Tuổi</span>
+                </h2>
+                <p class="mt-4 text-gray-500 text-sm md:text-base leading-relaxed">
+                    Nền tảng kết nối y tế thông minh. Lựa chọn bác sĩ thăm khám tận nhà, đặt lịch tại phòng khám nhanh chóng hoặc yêu cầu xe đưa đón an toàn cho người thân của bạn.
+                </p>
+            </div>
+
+            <!-- Khối 3 nút Dịch vụ -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-auto md:mt-0">
+                
+                <!-- Nút 1: Bác Sĩ Đến Nhà -->
+                <a href="/booking?type=home_care" class="group bg-purple-600 hover:bg-purple-700 text-white rounded-2xl p-5 md:p-6 flex sm:flex-col items-center sm:justify-center text-left sm:text-center transition duration-300 shadow-lg hover:shadow-purple-500/40 hover:-translate-y-1 gap-4 sm:gap-3">
+                    <span class="text-3xl md:text-4xl bg-white/20 p-3 rounded-xl sm:p-0 sm:bg-transparent sm:rounded-none group-hover:scale-110 transition-transform">🏠</span>
+                    <div>
+                        <span class="block text-sm md:text-[13px] font-bold uppercase tracking-wider">Bác Sĩ</span>
+                        <span class="block text-sm md:text-[13px] font-bold uppercase tracking-wider">Đến Nhà</span>
+                    </div>
+                </a>
+                
+                <!-- Nút 2: Đến Phòng Khám -->
+                <a href="/booking?type=clinic" class="group bg-purple-600 hover:bg-purple-700 text-white rounded-2xl p-5 md:p-6 flex sm:flex-col items-center sm:justify-center text-left sm:text-center transition duration-300 shadow-lg hover:shadow-purple-500/40 hover:-translate-y-1 gap-4 sm:gap-3">
+                    <span class="text-3xl md:text-4xl bg-white/20 p-3 rounded-xl sm:p-0 sm:bg-transparent sm:rounded-none group-hover:scale-110 transition-transform">🏥</span>
+                    <div>
+                        <span class="block text-sm md:text-[13px] font-bold uppercase tracking-wider">Phòng Khám</span>
+                        <span class="block text-sm md:text-[13px] font-bold uppercase tracking-wider">Khám Ngay</span>
+                    </div>
+                </a>
+                
+                <!-- Nút 3: Thuê Xe Đón -->
+                <a href="/booking?type=transport" class="group bg-purple-600 hover:bg-purple-700 text-white rounded-2xl p-5 md:p-6 flex sm:flex-col items-center sm:justify-center text-left sm:text-center transition duration-300 shadow-lg hover:shadow-purple-500/40 hover:-translate-y-1 gap-4 sm:gap-3">
+                    <span class="text-3xl md:text-4xl bg-white/20 p-3 rounded-xl sm:p-0 sm:bg-transparent sm:rounded-none group-hover:scale-110 transition-transform">🚗</span>
+                    <div>
+                        <span class="block text-sm md:text-[13px] font-bold uppercase tracking-wider">Thuê Xe</span>
+                        <span class="block text-sm md:text-[13px] font-bold uppercase tracking-wider">Đưa Đón</span>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
