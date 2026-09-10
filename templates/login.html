@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - An Gia Home Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans">
+    
+    <div class="w-full max-w-md bg-white md:rounded-[2rem] shadow-2xl overflow-hidden flex flex-col min-h-screen md:min-h-0 relative p-8">
+        
+        <!-- Nút Back -->
+        <a href="/" class="text-gray-400 hover:text-gray-800 text-2xl font-bold mb-6 absolute top-6 left-6 transition">&larr;</a>
+
+        <div class="text-center mt-12 mb-8">
+            <span class="text-5xl block mb-4">💜</span>
+            <h2 class="text-2xl font-extrabold text-gray-900">Chào mừng trở lại</h2>
+            <p class="text-gray-500 mt-2 text-sm">Vui lòng chọn vai trò của bạn để tiếp tục</p>
+        </div>
+
+        <!-- Các lựa chọn Đăng nhập -->
+        <div class="flex flex-col gap-4">
+            
+            <!-- User 1: Bệnh nhân / Người nhà -->
+            <a href="#" class="group border-2 border-gray-200 hover:border-purple-500 rounded-2xl p-4 flex items-center gap-4 transition duration-300">
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-2xl group-hover:bg-purple-100 transition">👨‍👩‍👧</div>
+                <div class="text-left">
+                    <h3 class="font-bold text-gray-800 group-hover:text-purple-700 transition">Bệnh Nhân / Người Nhà</h3>
+                    <p class="text-xs text-gray-500">Đặt lịch khám, theo dõi hồ sơ</p>
+                </div>
+                <span class="ml-auto text-gray-400 group-hover:text-purple-500 font-bold">&rarr;</span>
+            </a>
+
+            <!-- User 2: Bác sĩ -->
+            <a href="#" class="group border-2 border-gray-200 hover:border-purple-500 rounded-2xl p-4 flex items-center gap-4 transition duration-300">
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-2xl group-hover:bg-purple-100 transition">👨‍⚕️</div>
+                <div class="text-left">
+                    <h3 class="font-bold text-gray-800 group-hover:text-purple-700 transition">Bác Sĩ Đối Tác</h3>
+                    <p class="text-xs text-gray-500">Quản lý ca khám, doanh thu</p>
+                </div>
+                <span class="ml-auto text-gray-400 group-hover:text-purple-500 font-bold">&rarr;</span>
+            </a>
+
+            <!-- User 3: Tài xế -->
+            <a href="#" class="group border-2 border-gray-200 hover:border-purple-500 rounded-2xl p-4 flex items-center gap-4 transition duration-300">
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-2xl group-hover:bg-purple-100 transition">🚕</div>
+                <div class="text-left">
+                    <h3 class="font-bold text-gray-800 group-hover:text-purple-700 transition">Tài Xế Vận Chuyển</h3>
+                    <p class="text-xs text-gray-500">Nhận cuốc xe đưa đón y tế</p>
+                </div>
+                <span class="ml-auto text-gray-400 group-hover:text-purple-500 font-bold">&rarr;</span>
+            </a>
+
+        </div>
+
+        <div class="mt-auto md:mt-10 pt-6 text-center text-sm text-gray-500">
+            Chưa có tài khoản? <a href="#" class="text-purple-600 font-bold hover:underline">Đăng ký ngay</a>
+        </div>
+
+    </div>
+</body>
+</html>
